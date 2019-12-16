@@ -8,4 +8,6 @@ class User < ApplicationRecord
   has_many :received, class_name: "Message", foreign_key: "receiver_id"
 
   validates :name, presence: true
+
+  has_one_attached :photo
 end
